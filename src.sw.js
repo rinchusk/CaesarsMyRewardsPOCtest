@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.5ef50d4bcd157076dda8b4fd98c54179.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/precache-manifest.44cbaa1ee70c820a8819f2ba27dc1d05.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 
 console.log('Service worker Loaded ');
@@ -17,4 +17,9 @@ console.log(data);
         body : " Sucess "
     });
 });
+
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', () => self.clients.claim());
+
+
 
